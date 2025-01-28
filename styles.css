@@ -1,0 +1,252 @@
+/* Importando as fontes do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Montserrat:wght@400;700&display=swap');
+
+/* Reset básico de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos gerais */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f2f2f2;
+    color: #333;
+    line-height: 2;
+    text-align: justify;
+    margin-bottom: 20px;
+    padding: 0;
+}
+
+/* Estilos do cabeçalho */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Navegação */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 0;
+}
+
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    transition: transform 0.15s ease, color 0.15s ease;
+}
+/* Cor das letras ao passar a seta do mouse */
+nav ul li a:hover {
+    transform: scale(1.05);
+    color: #97b3cb;
+}
+
+/* Seções principais */
+main {
+    padding: 1rem;
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+/*Parâmetros das sections*/
+section {
+    margin-bottom: 1rem;
+    padding: 1.5rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+section:hover {
+    border-color: #97b3cb;
+    transform: scale(1.01);
+}
+/*Títulos das sections e seus parâmetros*/
+section h2 {
+    color: #333;
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+section p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.8;
+}
+
+/* Galeria de imagens e seus parâmetros*/
+.gallery {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 10px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(152, 157, 161, 0.1);
+}
+
+.gallery a {
+    flex: 0 0 auto;
+    height: 250px;
+    width: auto;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out;
+}
+
+.gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+}
+/*Distorções interações e seus parâmetros*/
+.gallery img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.gallery a:hover {
+    transform: scale(1.03);
+}
+
+/* Customização da barra de rolagem */
+.gallery::-webkit-scrollbar {
+    height: 10px;
+}
+
+.gallery::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 2px;
+}
+
+/* Botões de rolagem */
+.scroll-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.scroll-buttons button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #888;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.1s ease;
+}
+
+.scroll-buttons button:hover {
+    background-color: #888;
+}
+
+/* Tela cheia para imagens */
+.fullscreen-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.fullscreen-overlay img {
+    max-width: 90%;
+    max-height: 90%;
+    cursor: pointer;
+}
+
+/* Links */
+a {
+    color: #8fa8b5;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #555;
+}
+
+/* Rodapé */
+footer {
+    display: flex;
+    justify-content: center;
+    padding: 1.75rem 0;
+    background-color: #333;
+    color: #fff;
+    margin-top: 3rem;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-size: 0.78rem;
+}
+
+/* Containers do rodapé */
+.footer-container, .footer-container2, .center-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+    width: 65%;
+    max-width: 1250px;
+    padding: 0 2rem;
+}
+
+/* Estilo para links e ícones no rodapé */
+.footer-link, .footerifpi {
+    font-size: 0.78rem;
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    transition: color 0.15s ease;
+}
+
+.footer-link:hover, .footerifpi:hover {
+    color: #97b3cb;
+}
+
+.footer-link img, .footerifpi img {
+    width: 15px;
+    height: auto;
+}
+
+.footer-link img {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    footer {
+        font-size: 0.75rem;
+    }
+    nav ul {
+        flex-direction: column;
+        margin-top: 1rem;
+    }
+    .gallery {
+        gap: 10px;
+    }
+}
